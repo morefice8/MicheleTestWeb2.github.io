@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector(".partita-card").classList.add(cardClass);
     }
 
-    fetch("http://localhost:3000/matches")
+    fetch('assets/json/matches.json')
         .then(response => response.json())
         .then(lastMatches => {
             extractMatchData(lastMatches);

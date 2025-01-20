@@ -67,6 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
         chiudiModal();
     });
 
+    // Chiudi il modal premendo il tasto Esc
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            chiudiModal();
+        }
+    });
+
     // Funzione per chiudere il modal
     function chiudiModal() {
         modal.style.display = "none";  // Nasconde il modal

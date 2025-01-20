@@ -507,6 +507,69 @@ img, table {
  .gallery img:hover {
     transform: scale(1.05);
  }
+
+/* Stile per il modal */
+#gallery-modal {
+    display: none;  /* Modal nascosto di default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;  /* Modal sopra l'overlay */
+    background-color: #AEE8FC; /* Azzurro chiaro */
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+/* Contenitore del contenuto del modal */
+#gallery-modal .modal-content {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Immagine nel modal */
+#gallery-modal img {
+    opacity: 1;
+    width: 100%;  /* L'immagine si adatta alla larghezza del modal */
+    height: auto;  /* Mantieni le proporzioni */
+    object-fit: contain;  /* Mantieni le proporzioni senza tagliare */
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    z-index: 1060; /* Assicurati che l'immagine sia sopra l'overlay */
+}
+
+/* Overlay del modal */
+.gallery-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1040;  /* Overlay sotto il contenuto del modal */
+    /* Inizialmente nascosto */
+}
+
+/* Pulsante di chiusura */
+#gallery-modal .modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
  
 /* Contenitore generale del carousel */
 .carousel {
@@ -763,6 +826,29 @@ footer {
     overflow-y: auto;
 }
 
+.modal.active {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    background-color: #AEE8FC; /* Azzurro chiaro */
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.modal-content {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
 /* Corpo del modal con scroll */
 .modal-body {
     max-height: calc(90vh - 100px); /* Altezza massima, tenendo conto di margini per evitare conflitti */
@@ -778,6 +864,7 @@ footer {
     align-items: center;
     border-radius: 8px;
     margin-bottom: 20px;
+    z-index: 1060; /* Assicurati che l'immagine sia sopra gli altri elementi */
 }
 
 .modal-header h3,
