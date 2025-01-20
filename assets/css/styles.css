@@ -82,15 +82,7 @@ footer {
  
  .tab-content .tab-pane.active {
     display: block;
- } 
-
-
-
-@media (max-width: 768px) {
-    body {
-        background-size: auto; /* Adatta meglio l'immagine per schermi piccoli */
-    }
-}
+ }
 
 /* Header */
 header {
@@ -276,17 +268,6 @@ button,
 .ultima-partita-content h2,
 .prossima-partita-content h2 {
     font-size: 2.5rem; /* Ridotto leggermente il font-size per migliorare la leggibilità */
-}
-
-@media (max-width: 768px) {
-    .partite-container {
-        flex-direction: column;              /* Cambia il layout a colonna per schermi piccoli */
-        align-items: center;                 /* Allinea le card al centro */
-    }
-
-    .partita-card {
-        width: 80%;                          /* Su dispositivi mobili, ogni card occupa l'80% della larghezza */
-    }
 }
 
 .partita-card:hover {
@@ -840,4 +821,105 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+
+/* Media Query per Tablet e Smartphone */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 3rem; /* Ridimensiona il titolo */
+    }
+    
+    .navbar ul {
+        flex-direction: column; /* Menu verticale */
+        gap: 10px;
+    }
+
+    .navbar a {
+        padding: 10px 15px; /* Dimensioni più compatte */
+        font-size: 1rem;
+    }
+
+    .partita-card {
+        flex: 1 1 100%; /* Una card per riga */
+        width: 90%; /* Più spazio laterale */
+        height: auto; /* Altezza dinamica */
+    }
+
+    .member-info h4 {
+        font-size: 2rem; /* Ridimensiona il titolo */
+    }
+
+    .member-info p {
+        font-size: 1.2rem; /* Testo più piccolo */
+    }
+
+    .member-photo img {
+        width: 80%; /* Immagini più piccole */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px; /* Margini più stretti */
+    }
+
+    .cta-button {
+        font-size: 0.9rem; /* Pulsanti più piccoli */
+        padding: 8px 15px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .carousel .member-slide {
+        flex-direction: column; /* Disposizione verticale */
+        text-align: center; /* Centrare contenuto */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Testo footer ridotto */
+        padding: 15px 5px;
+    }
+
+    .partita-card {
+        flex: 1 1 100%; /* Card a tutta larghezza */
+        height: auto; /* Altezza dinamica */
+    }
+    .carousel img {
+        width: 100%; /* Immagini ridimensionate */
+    }
+}
+
+/* Miglioramenti generali per smartphone */
+@media (max-width: 576px) {
+    .tab-links li {
+        padding: 8px; /* Margini più piccoli per i tab */
+        font-size: 0.9rem;
+    }
+
+    .tab-content .tab-pane {
+        padding: 10px; /* Riduci i margini interni */
+    }
+
+    .partita-card {
+        padding: 15px; /* Margini interni più piccoli */
+    }
+
+    .fc-daygrid-day-frame {
+        min-height: 80px; /* Celle del calendario più piccole */
+        padding: 5px;
+    }
+
+    .navbar ul {
+        gap: 5px; /* Minor spazio tra i link */
+    }
+
+    .navbar a {
+        font-size: 0.8rem; /* Testo più piccolo */
+    }
 }
