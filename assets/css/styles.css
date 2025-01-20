@@ -1,41 +1,843 @@
-/* Stile per il contenitore del calendario */
-#calendar {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    background-color: rgba(0, 64, 133, 0.8);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altezza minima per coprire l'intera finestra */
 }
 
-/* Titolo del calendario */
-#calendar h2 {
-    font-size: 1.8em;
-    color: #2a2a2a;
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 64, 133, 0.6), rgba(0, 64, 133, 0.6)),
+                url('../../images/napoli-club-madrid.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+/* Main per espandersi */
+main {
+    flex: 1;
+    padding-top: 80px; /* Altezza per compensare i tabs fissi */
+}
+
+/* Footer */
+footer {
+    background-color: #0A3C7B; /* Blu scuro Napoli */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Tab Styles */
+.tabs {
+    margin-top: 40px;
+ }
+ 
+ .tab-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ .tab-links li {
+    flex: 1;
+    background-color: #0D47A1; /* Blu Napoli */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ }
+ 
+ .tab-links li a {
+    color: white;
+    text-decoration: none;
+ }
+ 
+ .tab-links li.active {
+    background-color: #988284; /* Arancione per il tab attivo */
+ }
+ 
+ .tab-links li:hover {
+    background-color: #0A3C7B; /* Blu più scuro per l'hover */
+ }
+ 
+ .tab-content .tab-pane {
+    display: none;
+    margin-top: 20px;
+ }
+ 
+ .tab-content .tab-pane.active {
+    display: block;
+ } 
+
+
+
+@media (max-width: 768px) {
+    body {
+        background-size: auto; /* Adatta meglio l'immagine per schermi piccoli */
+    }
+}
+
+/* Header */
+header {
+    background: #004085;
+    /* Blu scuro */
+    text-align: center;
+    padding: 50px 0;
+    color: #FFFFFF;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Effetto rilievo */
+}
+
+h2, p, a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Pulsanti */
+button,
+.btn {
+    background-color: #00A9E0;
+    /* Azzurro Napoli */
+    color: #FFFFFF;
+    border: 2px solid #004085;
+    /* Bordo blu scuro */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #004085;
+    color: #FFFFFF;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background: #00A9E0;
+    border-radius: 5px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #004085;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3; /* Blu più chiaro */
+}
+
+/* Stile per la sezione Ultima Partita */
+#ultima-partita {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(0, 51, 102, 0.7); /* Sfondo blu Napoli semitrasparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.ultima-partita-content h2 {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Stile per la sezione Prossima Partita */
+#prossima-partita {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(0, 51, 102, 0.7); /* Sfondo blu Napoli semitrasparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.prossima-partita-content h2 {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Stile per la card della partita */
+.partite-container {
+    display: flex;                         /* Imposta il layout flex per affiancare le card */
+    flex-wrap: wrap;                       /* Consente alle card di andare a capo se non c'è spazio */
+    justify-content: space-between;        /* Spazio tra le card */
+    align-items: flex-start;               /* Allinea le card in alto, se non c'è spazio in verticale */
+    gap: 10px;                             /* Distanza tra le card */
+    width: 100%;                           /* La larghezza del contenitore è il 100% disponibile */
+    box-sizing: border-box;                /* Assicura che la larghezza includa padding e bordi */
+}
+
+#ultima-partita, #prossima-partita {
+    display: flex;
+    flex-wrap: wrap; /* Permette la disposizione delle card su più righe */
+    justify-content: space-between; /* Distanza tra le card */
+    gap: 20px; /* Spaziatura tra le card */
+    margin-top: 20px;
+}
+
+.partita-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 51, 102, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    flex: 1 1 calc(50% - 20px);  /* Le card occupano metà dello spazio, ma con gap tra di loro */
+    max-width: 1000px;
+    height: 250px;  /* Altezza fissa per le card */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.team img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-right: 20px;
+    border: none;
+    border-radius: 50%; /* Se preferisci un logo rotondo */
+}
+
+.risultato {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.risultato .score {
+    color: #ffcc00;
+}
+
+
+.ultima-partita-content h2,
+.prossima-partita-content h2 {
+    font-size: 2.5rem; /* Ridotto leggermente il font-size per migliorare la leggibilità */
+}
+
+@media (max-width: 768px) {
+    .partite-container {
+        flex-direction: column;              /* Cambia il layout a colonna per schermi piccoli */
+        align-items: center;                 /* Allinea le card al centro */
+    }
+
+    .partita-card {
+        width: 80%;                          /* Su dispositivi mobili, ogni card occupa l'80% della larghezza */
+    }
+}
+
+.partita-card:hover {
+    background-color: #007acc; /* Colore più chiaro per l'hover */
+    transform: translateY(-5px);
+}
+
+/* Dettagli partita */
+.dettagli-partita {
+    font-size: 1.2rem;  /* Dimensione più piccola rispetto al titolo */
+    font-style: italic;
+    text-align: center;
+    color: #e1e1e1;  /* Colore più chiaro per i dettagli */
+    margin-top: 15px; /* Distanza dal risultato */
+}
+
+.partita-card .partita-info .data {
+    font-weight: normal;
+}
+
+
+/* Risultato della partita */
+.risultato {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.score {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.background-section {
+    height: 720px; /* Altezza della sezione */
+    background-image: url('../../images/napoli-club-madrid.jpeg'); /* URL dell'immagine */
+    background-size: cover; /* Adatta l'immagine alla sezione */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita la ripetizione */
+    margin: 20px 0; /* Spaziatura sopra e sotto */
+    border-radius: 8px; /* Aggiungi bordi arrotondati (opzionale) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra (opzionale) */
+}
+
+button, .btn {
+    background-color: #004085;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #002a5c;
+    /* Blu ancora più scuro al passaggio del mouse */
+}
+
+img, table {
+    border: 2px solid #004085;
+    border-radius: 8px;
+}
+
+.past-matches,
+.future-matches {
+    margin: 20px 0;
+}
+
+.match {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.match:last-child {
+    border-bottom: none;
+}
+
+.fc {
+    font-family: sans-serif;
+}
+
+#calendario {
+    width: 100%;
+    height: 100%;
+  }
+
+/* Box per vittorie */
+.fc-event.napoli-win {
+    background-color: #d4edda !important;
+    /* Verde chiaro */
+    color: #155724 !important;
+    /* Testo verde scuro */
+    border: 1px solid #c3e6cb !important;
+}
+
+/* Box per pareggi */
+.fc-event.napoli-draw {
+    background-color: #fff3cd !important;
+    /* Giallo chiaro */
+    color: #856404 !important;
+    /* Testo giallo scuro */
+    border: 1px solid #ffeeba !important;
+}
+
+/* Box per sconfitte */
+.fc-event.napoli-loss {
+    background-color: #f8d7da !important;
+    /* Rosso chiaro */
+    color: #721c24 !important;
+    /* Testo rosso scuro */
+    border: 1px solid #f5c6cb !important;
+}
+
+/* Stile generico per gli eventi */
+.match-box {
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+/* Colori per eventi passati */
+.fc-event-past {
+    background-color: #ffcccc !important;
+    /* Rosso chiaro */
+    color: #a00 !important;
+    /* Testo scuro */
+    border: 1px solid #a00 !important;
+}
+
+/* Colori per eventi futuri */
+.fc-event-future {
+    background-color: #cce5ff !important;
+    /* Azzurro chiaro */
+    color: #004085 !important;
+    /* Testo blu */
+    border: 1px solid #004085 !important;
+}
+
+/* Tooltip su hover */
+.fc-event:hover {
+    position: relative;
+}
+
+.fc-event:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Aumenta l'altezza delle celle del calendario */
+.fc-daygrid-day-frame {
+    min-height: 100px;
+    /* Regola il valore per aumentare la dimensione delle celle */
+}
+
+/* Ridimensiona il testo */
+.fc-event-title {
+    font-size: 14px;
+    /* Riduce leggermente la dimensione del testo */
+}
+
+.fc-daygrid-day-number {
+    font-size: 16px;
+    /* Dimensione per il numero del giorno */
+    font-weight: bold;
+}
+
+/* Margini interni nelle celle */
+.fc-daygrid-day-frame {
+    padding: 8px;
+}
+
+/* Centratura degli eventi */
+.fc-event {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Altezza minima per i contenitori degli eventi */
+.fc-daygrid-event {
+    min-height: 30px;
+    /* Spazio per gli eventi */
+}
+
+/* Forza la capitalizzazione dei giorni */
+.fc .fc-daygrid-day-top .fc-daygrid-day-number,
+.fc .fc-daygrid-day-top .fc-day {
+    text-transform: capitalize;
+}
+
+/* Forza la capitalizzazione del titolo del mese */
+.fc-toolbar-title {
+    text-transform: capitalize;
+}
+
+/* Forza la capitalizzazione dei giorni nella barra intestazione */
+.fc .fc-col-header-cell {
+    text-transform: capitalize;
+}
+
+ /* Galleria */
+ .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+ }
+ 
+ .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+ }
+ 
+ .gallery img:hover {
+    transform: scale(1.05);
+ }
+ 
+/* Contenitore generale del carousel */
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Slide individuali */
+.member-slide {
+    display: none; /* Nasconde le slide non attive */
+    width: 100%;
+    justify-content: flex-start; /* Allinea i contenuti all'inizio */
+    align-items: center;
+}
+
+/* La slide attiva è visibile */
+.member-slide.active {
+    display: flex;
+}
+
+/* Contenuto della slide */
+.member-content {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row; /* Posiziona foto e descrizione in orizzontale */
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Spazio tra foto e descrizione */
+}
+
+/* Foto del membro */
+.member-photo {
+    flex: 0 0 50%; /* La foto occupa il 40% dello spazio */
+    text-align: center;
+}
+
+.member-photo img {
+    width: 600px; /* Larghezza fissa */
+    height: 600px; /* Altezza fissa */
+    object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Descrizione del membro */
+.member-info {
+    flex: 1; /* La descrizione occupa il resto dello spazio */
+    padding: 10px;
+}
+
+.member-info h4 {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.member-info p {
+    font-family: 'Ultras Liberi', sans-serif;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+/* Bottoni di navigazione */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+    background-color: #0057b7; /* Azzurro Napoli */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.2rem;
+  }
+  
+  footer p,
+  footer a {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  
+  footer .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Spazio tra elementi */
+  }
+  
+  footer a {
+    color: #ffdd00; /* Giallo Napoli */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
+
+  .classifica-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.classifica-table th, .classifica-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.classifica-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.classifica-table td {
+    text-align: left;
+}
+
+.classifica-table td img.logo {
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: none;
+}
+
+.errore {
+    color: red;
+    font-weight: bold;
+}
+
+.immagine-centrata {
+    display: block;
+    margin: 20px auto; /* Centra l'immagine */
+    max-width: 100%; /* Limita la larghezza massima al 100% del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 10px; /* Aggiunge angoli arrotondati, opzionale */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra, opzionale */
+}
+
+#instagram-feed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.instagram-post {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-post img,
+.instagram-post video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instagram-post a {
+    display: block;
+    text-decoration: none;
+}
+
+#blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Anteprima articoli */
+.blog-article {
+    background-color: #AEE8FC; /* Azzurro chiaro */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leggera ombra al contenitore */
+}
+
+.blog-article img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.article-content h3,
+.article-content p {
+    color: #003366; /* Testo blu scuro */
+    text-shadow: none !important; /* Rimuove ogni ombra */
+}
+
+/* Modal */
+.modal {
+    display: none;  /* Modal nascosto di default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    background-color: #AEE8FC; /* Azzurro chiaro */
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+/* Corpo del modal con scroll */
+.modal-body {
+    max-height: calc(90vh - 100px); /* Altezza massima, tenendo conto di margini per evitare conflitti */
+    overflow-y: auto; /* Aggiungi scroll verticale quando il contenuto è troppo lungo */
+    padding-right: 10px; /* Per evitare che il contenuto tocchi la scrollbar */
+}
+
+/* Immagine del modal adattata alle dimensioni */
+.modal-body img {
+    width: 100%;  /* L'immagine si adatta alla larghezza del modal */
+    height: auto;  /* Mantieni le proporzioni */
+    object-fit: cover;
+    align-items: center;
+    border-radius: 8px;
     margin-bottom: 20px;
 }
 
-/* Singola partita */
-.match {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #ffffff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.modal-header h3,
+.modal-body p {
+    color: #003366; /* Testo blu scuro */
+    text-shadow: none !important; /* Rimuove ombre */
+    white-space: normal; /* Permette il ritorno a capo automatico */
 }
 
-.match:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-/* Dettagli della partita */
-.match h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin: 0;
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Sfondo semitrasparente */
+    z-index: 1040;  /* Z-index più basso dell'elemento modal */
+    display: none;  /* Inizialmente nascosto */
 }
 
-.match p {
-    margin: 5px 0;
-    color: #666;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

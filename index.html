@@ -1,139 +1,277 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Michele Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/styles.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="it">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Sito ufficiale del Napoli Fun Club Madrid. Calendario, partite, e molto altro.">
+	<meta name="author" content="Napoli Club Madrid">
+	<title>Napoli Fun Club Madrid</title>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Michele test website<br />
-						</h1>
-						<p>Learning how to create a professional website with portfolio of <a href="https://www.linkedin.com/in/micheleorefice/">@micheleorefice</a><br />
-						</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+	<!-- Link al file CSS esterno -->
+	<link rel="stylesheet" href="assets/css/styles.css">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Michele Test Website</a>							
-					</header>
+	<!-- FullCalendar CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.10/index.global.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.10/index.global.min.css" rel="stylesheet">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/micheleorefice/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/morefice8" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+	<!-- Favicon -->
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-				<!-- Main -->
-					<div id="main">
+</head>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">January 3, 2025</span>
-									<h2><a href="https://github.com/morefice8/Covid19DataExploration">COVID-19 Insights Dashboard<br/>
-									</a></h2>
-								</header>
-								<p style="text-align: center;"><strong>Explore our user-friendly dashboard, designed to give you clear insights into COVID-19 data.</strong></p>
-								<div style="display: flex; align-items: center;">
-									<a href="https://github.com/morefice8/Covid19DataExploration" class="image main" style="flex: 1;">
-										<img src="images/dashboard.jpeg" alt="" />
-									</a>
-									<div style="flex: 2; padding-left: 20px;">
-										<p>Our data is sourced from the reliable <a href="https://ourworldindata.org/covid-deaths">Our World in Data</a> platform. Using MySQL queries, we've identified significant trends in infection and mortality rates.
-										</br>Using Tableau, we've created an intuitive visual representation of these findings. Dive into the data, see important patterns, and gain a better understanding of the COVID-19 situation with ease.
-										</p>
+<body>
+	<!-- Tabs sempre visibili -->
+	<div class="tabs">
+		<ul class="tab-links">
+			<li class="active"><a href="#presentazione">Presentazione</a></li>
+			<li><a href="#eventi">Eventi</a></li>
+			<li><a href="#blog">Blog</a></li>
+			<li><a href="#membri">Membri</a></li>
+			<li><a href="#galleria">Galleria</a></li>
+			<!--li><a href="#calendario">Prossime Partite</a></li>-->
+			<li><a href="#partite">Partite</a></li>
+		</ul>
+	</div>
+
+	<main>
+		<section id="chi-siamo">
+			<div class="container">
+				<div class="tabs">
+					<div class="tab-content">
+
+						<!-- Presentazione del Club -->
+						<div id="presentazione" class="tab-pane active">
+							<h2>Benvenuti nel Napoli Fun Club Madrid!</h2>
+							<p>Siamo un gruppo di appassionati tifosi del Napoli che si è unito a Madrid per celebrare
+								insieme la passione per la nostra squadra del cuore. Partecipiamo a eventi, proiezioni
+								delle
+								partite e momenti di socializzazione per vivere il Napoli anche lontano da casa.</p>
+							<p>Unisciti a noi e fai parte della nostra grande famiglia!</p>
+
+						</div>
+
+						<!-- Eventi - Feed Instagram -->
+						<div id="eventi" class="tab-pane">
+							<h2>Eventi e Post Instagram</h2>
+							<div id="instagram-feed">
+								<p>Caricamento dei post in corso...</p>
+							</div>
+						</div>
+
+						<!-- Blog - Articoli -->
+						<div id="blog" class="tab-pane">
+							<h2>Articoli</h2>
+							<div id="blog-container"></div>
+
+							<!-- Overlay per il background -->
+							<div id="modal-overlay" class="modal-overlay"></div>
+
+							<!-- Modal -->
+							<div id="modal" class="modal">
+								<div class="modal-overlay" id="modal-overlay"></div>
+								<div class="modal-body">
+									<img id="modal-image" src="" alt="Articolo Immagine">
+									<h2 id="modal-title"></h2>
+									<div id="modal-content"></div> <!-- Dove il contenuto dell'articolo va inserito -->
+								</div>
+								<button class="modal-close-btn" id="modal-close-btn">×</button>
+							</div>
+						</div>
+						<script src="assets/js/articoli.js"></script>
+
+						<!-- I Membri -->
+						<div id="membri" class="tab-pane">
+							<h2>Membri del Club</h2>
+							<!-- Carousel per i membri -->
+							<div class="carousel">
+								<div class="member-slide active">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/ciro.jpeg" alt="ciro">
+										</div>
+										<div class="member-info">
+											<h4>Ciro</h4>
+											<p>El Rey de Madrid</p>
+										</div>
 									</div>
 								</div>
-								<div style="display: flex; align-items: center;">
-									<ul class="actions special" style="flex: 1; padding-right: 20px;">
-										<li><a href="https://github.com/morefice8/Covid19DataExploration" class="button large">View Project</a></li>
-									</ul>
-							</article>
+								<!-- Aggiungi più membri qui -->
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/scudieri.jpeg" alt="scudieri">
+										</div>
+										<div class="member-info">
+											<h4>Scudieri</h4>
+											<p>Cane pastore</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/fusi.jpeg" alt="fusi">
+										</div>
+										<div class="member-info">
+											<h4>Fusi</h4>
+											<p>Il libraio</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/pietro.jpeg" alt="pacciani">
+										</div>
+										<div class="member-info">
+											<h4>Pietro</h4>
+											<p>Pacciani</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/michele.jpeg" alt="michele">
+										</div>
+										<div class="member-info">
+											<h4>Michele</h4>
+											<p>8 e copp</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/vincenzo.jpeg" alt="vincenzo">
+										</div>
+										<div class="member-info">
+											<h4>Vincenzo</h4>
+											<p>Il cavallo ... i-ah</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/roberto.jpeg" alt="roberto">
+										</div>
+										<div class="member-info">
+											<h4>Roberto</h4>
+											<p>Il Pres</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/fabrizio.jpeg" alt="fabrizio">
+										</div>
+										<div class="member-info">
+											<h4>Fabrizio</h4>
+											<p>Il Virus</p>
+										</div>
+									</div>
+								</div>
+								<div class="member-slide">
+									<div class="member-content">
+										<div class="member-photo">
+											<img src="images/luigi.jpeg" alt="luigi">
+										</div>
+										<div class="member-info">
+											<h4>Luigi</h4>
+											<p>Piemonte chiama ... Cava risponde</p>
+										</div>
+									</div>
+								</div>
+								<button class="prev">&#10094;</button>
+								<button class="next">&#10095;</button>
+							</div>
+						</div>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">work in progress</span>
-										<h2><a href="#">Second project coming soon<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/wip.jpg" alt="" /></a>
-									<p>Working on it.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
+						<!-- Galleria Foto -->
+						<div id="galleria" class="tab-pane">
+							<h2>La Galleria del Club</h2>
+							<div class="gallery">
+								<img src="images/napoli-logo.jpg" alt="Evento 1">
+								<img src="images/napoli-logo.jpg" alt="Evento 2">
+								<img src="images/napoli-logo.jpg" alt="Evento 3">
+								<!-- Aggiungi altre foto -->
+							</div>
+						</div>
 
-						<!-- Footer -->
+						<!-- Parite -->
+						<div id="partite" class="tab-pane">
 
+							<div class="partite-container">
+								<!-- Card per l'ultima partita -->
+								<div class="partita-card" id="ultima-partita">
+									<h3>Ultima Partita</h3>
+									<div class="team" id="home-team">
+										<img alt="Logo Home Team">
+										<h3>Caricamento...</h3>
+									</div>
+									<div class="risultato">
+										<span class="score" id="home-score">-</span>
+										<span>-</span>
+										<span class="score" id="away-score">-</span>
+									</div>
+									<div class="team" id="away-team">
+										<h3>Caricamento...</h3>
+										<img alt="Logo Away Team">
+									</div>
+									<div class="dettagli-partita" id="match-details">
+										Caricamento dettagli prossima partita...
+									</div>
+								</div>
+								<script src="assets/js/lastMatch.js"></script>
+
+								<!-- Card per la prossima partita -->
+								<div class="partita-card" id="prossima-partita">
+									<h3>Prossima Partita</h3>
+									<div class="team" id="next-home-team">
+										<img alt="Logo Home Team">
+										<h3 id="next-home-team-name">Caricamento...</h3>
+									</div>
+									<div class="risultato">
+										<span class="score" id="next-home-score">-</span>
+										<span>-</span>
+										<span class="score" id="next-away-score">-</span>
+									</div>
+									<div class="team" id="next-away-team">
+										<h3 id="next-away-team-name">Caricamento...</h3>
+										<img alt="Logo Away Team">
+									</div>
+									<div class="dettagli-partita" id="next-match-details">
+										Caricamento dettagli prossima partita...
+									</div>
+									<div class="countdown" id="countdown">
+										<!-- Conto alla rovescia -->
+									</div>
+								</div>
+								<script src="assets/js/nextMatch"></script>
+
+							</div>
+
+							<div id="classifica-container"></div>
+							<script src="assets/js/classifica.js"></script>
+						</div>
 					</div>
+		</section>
+		<script src="assets/js/tab-interattivi.js"></script>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p> Madrid, Spain<br />
-								</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a>(+34) 6183935110</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a>oreficemic@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/micheleorefice/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/morefice8" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; MICHELE OREFICE</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+	</main>
 
-			</div>
+	<footer>
+		<div class="footer-container">
+			<p>Segui il Napoli Fun Club:</p>
+			<a href="https://www.instagram.com/napoli_club_madrid" target="_blank">
+				<img src="images/instagram-icon.jpg" alt="Instagram"
+					style="width: 30px; height: 30px; vertical-align: middle; border: none;"></a>
+		</div>
+	</footer>
+</body>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/napoli-matches.js"></script>
-	</body>
 </html>
