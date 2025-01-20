@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Sito ufficiale del Napoli Fun Club Madrid. Calendario, partite, e molto altro.">
+	<meta name="description" content="Sito ufficiale del Napoli Club Madrid. Calendario, partite, e molto altro.">
 	<meta name="author" content="Napoli Club Madrid">
 	<title>Napoli Fun Club Madrid</title>
 
@@ -42,7 +42,7 @@
 
 						<!-- Presentazione del Club -->
 						<div id="presentazione" class="tab-pane active">
-							<h2>Benvenuti nel Napoli Fun Club Madrid!</h2>
+							<h2>Benvenuti nel Napoli Club Madrid!</h2>
 							<p>Siamo un gruppo di appassionati tifosi del Napoli che si è unito a Madrid per celebrare
 								insieme la passione per la nostra squadra del cuore. Partecipiamo a eventi, proiezioni
 								delle
@@ -193,12 +193,16 @@
 						<!-- Galleria Foto -->
 						<div id="galleria" class="tab-pane">
 							<h2>La Galleria del Club</h2>
-							<div class="gallery">
-								<img src="images/napoli-logo.jpg" alt="Evento 1">
-								<img src="images/napoli-logo.jpg" alt="Evento 2">
-								<img src="images/napoli-logo.jpg" alt="Evento 3">
-								<!-- Aggiungi altre foto -->
+							<div id="gallery-container" class="gallery">
+								<!-- Le immagini della galleria saranno generate dinamicamente -->
 							</div>
+							<div id="gallery-modal" class="modal"> <!-- Cambiato l'ID del modal -->
+								<div id="gallery-modal-overlay" class="gallery-modal-overlay"></div>
+								<div class="gallery-modal-content">
+									<img id="gallery-modal-image" src="" alt="">
+								</div>
+							</div>
+							<script src="assets/js/immagini.js"></script>
 						</div>
 
 						<!-- Parite -->
