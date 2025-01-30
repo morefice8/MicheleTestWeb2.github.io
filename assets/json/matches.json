@@ -9,9 +9,9 @@
         "competitions": "SA",
         "first": "2024-08-18",
         "last": "2025-05-25",
-        "played": 21,
-        "wins": 9,
-        "draws": 19,
+        "played": 22,
+        "wins": 10,
+        "draws": 18,
         "losses": 3
     },
     "matches": [
@@ -33,7 +33,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503047,
@@ -42,7 +42,7 @@
             "matchday": 1,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 450,
                 "name": "Hellas Verona FC",
@@ -99,7 +99,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503058,
@@ -108,7 +108,7 @@
             "matchday": 2,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -165,7 +165,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503070,
@@ -174,7 +174,7 @@
             "matchday": 3,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -231,7 +231,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503074,
@@ -240,7 +240,7 @@
             "matchday": 4,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 104,
                 "name": "Cagliari Calcio",
@@ -297,7 +297,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503088,
@@ -306,7 +306,7 @@
             "matchday": 5,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 109,
                 "name": "Juventus FC",
@@ -363,7 +363,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503098,
@@ -372,7 +372,7 @@
             "matchday": 6,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -429,7 +429,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503111,
@@ -438,7 +438,7 @@
             "matchday": 7,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -495,7 +495,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503115,
@@ -504,7 +504,7 @@
             "matchday": 8,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 445,
                 "name": "Empoli FC",
@@ -561,7 +561,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503129,
@@ -570,7 +570,7 @@
             "matchday": 9,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -627,7 +627,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503140,
@@ -636,7 +636,7 @@
             "matchday": 10,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 98,
                 "name": "AC Milan",
@@ -693,7 +693,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503149,
@@ -702,7 +702,7 @@
             "matchday": 11,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -759,7 +759,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503157,
@@ -768,7 +768,7 @@
             "matchday": 12,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 108,
                 "name": "FC Internazionale Milano",
@@ -825,7 +825,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503169,
@@ -834,7 +834,7 @@
             "matchday": 13,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -891,7 +891,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503181,
@@ -900,7 +900,7 @@
             "matchday": 14,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 586,
                 "name": "Torino FC",
@@ -957,7 +957,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503190,
@@ -966,7 +966,7 @@
             "matchday": 15,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -1023,7 +1023,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503202,
@@ -1032,7 +1032,7 @@
             "matchday": 16,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 115,
                 "name": "Udinese Calcio",
@@ -1089,7 +1089,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503205,
@@ -1098,7 +1098,7 @@
             "matchday": 17,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 107,
                 "name": "Genoa CFC",
@@ -1155,7 +1155,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503220,
@@ -1164,7 +1164,7 @@
             "matchday": 18,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -1221,7 +1221,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503225,
@@ -1230,7 +1230,7 @@
             "matchday": 19,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 99,
                 "name": "ACF Fiorentina",
@@ -1287,7 +1287,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503239,
@@ -1296,7 +1296,7 @@
             "matchday": 20,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-16T15:21:24Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -1359,7 +1359,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503243,
@@ -1368,7 +1368,7 @@
             "matchday": 21,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-18T22:36:47Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 102,
                 "name": "Atalanta BC",
@@ -1425,16 +1425,16 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503259,
             "utcDate": "2025-01-25T17:00:00Z",
-            "status": "TIMED",
+            "status": "FINISHED",
             "matchday": 22,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2025-01-20T01:32:06Z",
+            "lastUpdated": "2025-01-28T15:20:39Z",
             "homeTeam": {
                 "id": 113,
                 "name": "SSC Napoli",
@@ -1450,21 +1450,28 @@
                 "crest": "https://crests.football-data.org/109.png"
             },
             "score": {
-                "winner": null,
+                "winner": "HOME_TEAM",
                 "duration": "REGULAR",
                 "fullTime": {
-                    "home": null,
-                    "away": null
+                    "home": 2,
+                    "away": 1
                 },
                 "halfTime": {
-                    "home": null,
-                    "away": null
+                    "home": 0,
+                    "away": 1
                 }
             },
             "odds": {
                 "msg": "Activate Odds-Package in User-Panel to retrieve odds."
             },
-            "referees": []
+            "referees": [
+                {
+                    "id": 11053,
+                    "name": "Daniele Chiffi",
+                    "type": "REFEREE",
+                    "nationality": "Italy"
+                }
+            ]
         },
         {
             "area": {
@@ -1484,7 +1491,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503271,
@@ -1493,7 +1500,7 @@
             "matchday": 23,
             "stage": "REGULAR_SEASON",
             "group": null,
-            "lastUpdated": "2024-12-24T10:20:47Z",
+            "lastUpdated": "2025-01-27T01:32:11Z",
             "homeTeam": {
                 "id": 100,
                 "name": "AS Roma",
@@ -1543,7 +1550,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503280,
@@ -1602,7 +1609,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503288,
@@ -1661,7 +1668,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503294,
@@ -1720,7 +1727,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503310,
@@ -1779,7 +1786,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503321,
@@ -1838,7 +1845,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503332,
@@ -1897,7 +1904,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503341,
@@ -1956,7 +1963,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503344,
@@ -2015,7 +2022,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503360,
@@ -2074,7 +2081,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503369,
@@ -2133,7 +2140,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503380,
@@ -2192,7 +2199,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503388,
@@ -2251,7 +2258,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503399,
@@ -2310,7 +2317,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503411,
@@ -2369,7 +2376,7 @@
                 "id": 2310,
                 "startDate": "2024-08-18",
                 "endDate": "2025-05-25",
-                "currentMatchday": 21,
+                "currentMatchday": 22,
                 "winner": null
             },
             "id": 503419,
